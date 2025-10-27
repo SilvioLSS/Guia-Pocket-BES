@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">Guia Pocket - Trabiju</string>
+    <string name="app_name">Guia Pocket - BES</string>
+    <string name="titulo">ESTABLISHMENTS</string>
+    <string name="supermercado">supermarket</string>
+    <string name="academia">gym</string>
+    <string name="agropecuaria">agriculture</string>
+    <string name="padaria">bakery</string>
+    <string name="loja_de_roupa">clothing store</string>
+    <string name="choperia">taproom</string>
 </resources>

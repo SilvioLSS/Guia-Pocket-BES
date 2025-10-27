@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Guia Pocket - BES</string>
+    <string name="titulo">ESTABELECIMENTOS</string>
+    <string name="supermercado">supermercado</string>
+    <string name="academia">academia</string>
+    <string name="agropecuaria">agropecuaria</string>
+    <string name="padaria">padaria</string>
+    <string name="loja_de_roupa">loja de roupas</string>
+    <string name="choperia">choperia</string>
+</resources>

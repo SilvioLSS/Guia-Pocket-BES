@@ -4,4 +4,6 @@ data class Estabelecimento(
     val foto: Int,
     val nome: String,
     val categoria: String
+    val descricao: String
+    val telefone: String
 )

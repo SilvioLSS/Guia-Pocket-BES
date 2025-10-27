@@ -1,5 +1,6 @@
 package com.example.guiapocket_trabiju.ui
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.guiapocket_trabiju.R
@@ -22,12 +23,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun loadData() {
         estabelecimentos = listOf(
-            Estabelecimento(R.drawable.imgsbes, "Boa Esperança Serve", getString(R.string.supermercado)),
-            Estabelecimento(R.drawable.img_belopao, "Belo Pão", getString(R.string.padaria)),
-            Estabelecimento(R.drawable.img_academia, "Vip Fitness", getString(R.string.academia)),
-            Estabelecimento(R.drawable.img_aquaflora, "Aquaflora", getString(R.string.agropecuaria)),
-            Estabelecimento(R.drawable.img_tradicao, "Tradição", getString(R.string.choperia)),
-            Estabelecimento(R.drawable.img_ivani, "Ivani Modas", getString(R.string.loja_de_roupa))
+            Estabelecimento(R.drawable.imgsbes, "Boa Esperança Serve", getString(R.string.supermercado), ),
+            Estabelecimento(R.drawable.img_belopao, "Belo Pão", getString(R.string.padaria),),
+            Estabelecimento(R.drawable.img_academia, "Vip Fitness", getString(R.string.academia),),
+            Estabelecimento(R.drawable.img_aquaflora, "Aquaflora", getString(R.string.agropecuaria),),
+            Estabelecimento(R.drawable.img_tradicao, "Tradição", getString(R.string.choperia),),
+            Estabelecimento(R.drawable.img_ivani, "Ivani Modas", getString(R.string.loja_de_roupa),)
 
         )
     }
@@ -35,6 +36,19 @@ class MainActivity : AppCompatActivity() {
     private fun setupViews() {
         val adapter = EstabelecimentoAdapter(this, estabelecimentos)
         binding.listViewEstabelecimentos.adapter = adapter
+    }
+
+    private fun setupListeners() {
+        binding.listViewEstabelecimentos.setOnItemClickListener { _, _, position, _ ->
+            val estabelecimento = estabelecimentos[position]
+            val intent = Intent(this, DetalheEstabelecimentoActivity::class.java)
+            intent.putExtra("foto", estabelecimento.nome)
+            intent.putExtra("nome", estabelecimento.categoria)
+            intent.putExtra("categoria", estabelecimento.categoria)
+            intent.putExtra("descricao", estabelecimento.descricao)
+            intent.putExtra("telefone", estabelecimento.telefone)
+            startActivity(intent)
+        }
     }
 
 }

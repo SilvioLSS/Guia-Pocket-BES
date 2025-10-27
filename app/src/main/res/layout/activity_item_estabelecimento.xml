@@ -24,14 +24,16 @@
             android:layout_height="wrap_content"
             android:text="Nome"
             android:textSize="18dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:textColor="@color/corTexto"/>
 
         <TextView
             android:id="@+id/categoriaEstabelecimento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="desc"
-            android:textSize="16dp"/>
+            android:textSize="16dp"
+            android:textColor="@color/corTexto"/>
 
     </LinearLayout>
 

@@ -8,4 +8,16 @@
     <string name="padaria">padaria</string>
     <string name="loja_de_roupa">loja de roupas</string>
     <string name="choperia">choperia</string>
+    <string name="nome_sbes">Boa Esperança Serve</string>
+    <string name="nome_beloPao">Belo Pão</string>
+    <string name="nome_tradicao">Tradição</string>
+    <string name="nome_ivani">Ivani Modas</string>
+    <string name="nome_aquaflora">Aqua Flora</string>
+    <string name="nome_academia">Vip Fitness</string>
+    <string name="desc_sbes">O Supermercado Boa Esperança Serve está localizado na Rua Tenente Penha, 300, no centro de Boa Esperança do Sul, SP. O estabelecimento funciona de segunda a sábado, das 7h às 19h30, e aos domingos, das 7h às 12h. Oferece uma variedade de produtos alimentícios e de utilidades para o dia a dia. The Boa Esperança Serve Supermarket is located at Rua Tenente Penha, 300, in the center of Boa Esperança do Sul, SP. The establishment is open Monday to Saturday, from 7:00 AM to 7:30 PM, and on Sundays, from 7:00 AM to 12:00 PM. It offers a variety of food products and everyday household items.</string>
+    <string name="desc_beloPao">A Padaria Belo Pão está localizada na Rua Mario Ybarra de Almeida, 209-303, em Boa Esperança do Sul, SP. O estabelecimento atende de segunda a sábado, das 5h às 19h, e aos domingos, das 6h ao meio-dia. Oferece uma variedade de pães, bolos e outros produtos de panificação para atender às necessidades do dia a dia.</string>
+    <string name="desc_tradicao">A Tradição Choperia está situada na Rua Dom Pedro II, no centro de Boa Esperança do Sul, SP. O local funciona de terça a domingo, das 18h à meia-noite, oferecendo um ambiente agradável para quem busca desfrutar de um bom chopp e petiscos, com opções para um happy hour ou encontro com amigos.</string>
+    <string name="desc_ivani">A Ivani's Modas é uma loja de roupas localizada na Rua Sete de Setembro, 380, no centro de Boa Esperança do Sul, SP. Com funcionamento de segunda a sábado, das 8h30 às 18h, a loja oferece uma variedade de opções de vestuário para diferentes estilos e ocasiões.</string>
+    <string name="desc_aquaflora">A AquaFlora está localizada na Rua Tenente Penha, 1076, em Boa Esperança do Sul, SP. O estabelecimento funciona de segunda a sexta-feira, das 07h30 às 18h30, e aos sábados, das 07h30 às 16h. Oferece uma variedade de produtos relacionados ao universo de jardinagem, como plantas, flores, vasos e acessórios para cultivo e decoração de ambientes.</string>
+    <string name="desc_academia">A Vip Fitness Academia está localizada na Rua General Osório, no centro de Boa Esperança do Sul, SP. A academia oferece horários amplos de atendimento, funcionando de segunda a sexta-feira, das 5h às 23h, e aos sábados, das 7h às 15h. É um espaço dedicado à prática de atividades físicas, com infraestrutura para atender diferentes modalidades e níveis de treino.</string>
 </resources>

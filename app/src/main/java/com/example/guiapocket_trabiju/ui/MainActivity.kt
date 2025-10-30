@@ -23,12 +23,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun loadData() {
         estabelecimentos = listOf(
-            Estabelecimento(R.drawable.imgsbes, "Boa Esperança Serve", getString(R.string.supermercado), ),
-            Estabelecimento(R.drawable.img_belopao, "Belo Pão", getString(R.string.padaria),),
-            Estabelecimento(R.drawable.img_academia, "Vip Fitness", getString(R.string.academia),),
-            Estabelecimento(R.drawable.img_aquaflora, "Aquaflora", getString(R.string.agropecuaria),),
-            Estabelecimento(R.drawable.img_tradicao, "Tradição", getString(R.string.choperia),),
-            Estabelecimento(R.drawable.img_ivani, "Ivani Modas", getString(R.string.loja_de_roupa),)
+            Estabelecimento(R.drawable.imgsbes, getString(R.string.nome_sbes), getString(R.string.supermercado), getString(R.string.desc_sbes)),
+            Estabelecimento(R.drawable.img_belopao, getString(R.string.nome_beloPao), getString(R.string.padaria), getString(R.string.desc_beloPao)),
+            Estabelecimento(R.drawable.img_academia, getString(R.string.nome_academia), getString(R.string.academia), getString(R.string.desc_academia)),
+            Estabelecimento(R.drawable.img_aquaflora, getString(R.string.nome_aquaflora), getString(R.string.agropecuaria), getString(R.string.desc_aquaflora)),
+            Estabelecimento(R.drawable.img_tradicao, getString(R.string.nome_tradicao), getString(R.string.choperia), getString(R.string.desc_tradicao)),
+            Estabelecimento(R.drawable.img_ivani, getString(R.string.nome_ivani), getString(R.string.loja_de_roupa), getString(R.string.desc_ivani))
 
         )
     }

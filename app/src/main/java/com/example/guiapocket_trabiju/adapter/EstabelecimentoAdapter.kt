@@ -8,20 +8,22 @@ import android.widget.ArrayAdapter
 import com.example.guiapocket_trabiju.databinding.ItemEstabelecimentoBinding
 import com.example.guiapocket_trabiju.model.Estabelecimento
 
-class EstabelecimentoAdapter (
+class EstabelecimentoAdapter(
     private val context: Context,
     private val lista: List<Estabelecimento>
 ) : ArrayAdapter<Estabelecimento>(context, 0, lista) {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val binding: ItemEstabelecimentoBinding
+        val view: View
 
-        if (convertView == null){
+        if (convertView == null) {
             binding = ItemEstabelecimentoBinding.inflate(LayoutInflater.from(context), parent, false)
-            val itemView = binding.root
-            itemView.tag = binding
+            view = binding.root
+            view.tag = binding
         } else {
             binding = convertView.tag as ItemEstabelecimentoBinding
+            view = convertView
         }
 
         val estabelecimento = lista[position]
@@ -29,6 +31,6 @@ class EstabelecimentoAdapter (
         binding.categoriaEstabelecimento.text = estabelecimento.categoria
         binding.foto.setImageResource(estabelecimento.foto)
 
-        return binding.root;
+        return view
     }
 }

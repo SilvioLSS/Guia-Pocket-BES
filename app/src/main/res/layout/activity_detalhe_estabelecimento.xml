@@ -6,8 +6,8 @@
 
     <ImageView
         android:id="@+id/img_estabelecimento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:layout_marginBottom="25dp"
         android:src="@drawable/ic_launcher_foreground"
         android:layout_gravity="center"/>
@@ -18,27 +18,30 @@
         android:layout_height="wrap_content"
         android:textSize="28dp"
         android:layout_marginBottom="10dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:textAlignment="center"/>
 
     <TextView
         android:id="@+id/categoria_estabelecimento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:textSize="24dp"/>
+        android:textSize="24dp"
+        android:textAlignment="center"/>
 
     <TextView
         android:id="@+id/descricao_estabelecimento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20dp"/>
+        android:textSize="20dp"
+        android:textAlignment="center"/>
 
-    <ImageButton
+    <Button
         android:id="@+id/btn_chamada_telefonica"
-        android:layout_width="48dp"
+        android:layout_width="200dp"
         android:layout_height="48dp"
-        android:src="@drawable/chamada_telefonica"
-        android:contentDescription="Chamar Estabelecimento"
+        android:text="Fazer ligação"
+        android:textSize="20dp"
         android:layout_marginTop="20dp"
         android:background="?android:attr/selectableItemBackground"
         android:layout_gravity="center" />

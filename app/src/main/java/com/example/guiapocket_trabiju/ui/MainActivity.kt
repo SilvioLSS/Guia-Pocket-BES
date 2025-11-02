@@ -19,17 +19,17 @@ class MainActivity : AppCompatActivity() {
 
         loadData()
         setupViews()
+        setupListeners()
     }
 
     private fun loadData() {
         estabelecimentos = listOf(
-            Estabelecimento(R.drawable.imgsbes, getString(R.string.nome_sbes), getString(R.string.supermercado), getString(R.string.desc_sbes)),
-            Estabelecimento(R.drawable.img_belopao, getString(R.string.nome_beloPao), getString(R.string.padaria), getString(R.string.desc_beloPao)),
-            Estabelecimento(R.drawable.img_academia, getString(R.string.nome_academia), getString(R.string.academia), getString(R.string.desc_academia)),
-            Estabelecimento(R.drawable.img_aquaflora, getString(R.string.nome_aquaflora), getString(R.string.agropecuaria), getString(R.string.desc_aquaflora)),
-            Estabelecimento(R.drawable.img_tradicao, getString(R.string.nome_tradicao), getString(R.string.choperia), getString(R.string.desc_tradicao)),
-            Estabelecimento(R.drawable.img_ivani, getString(R.string.nome_ivani), getString(R.string.loja_de_roupa), getString(R.string.desc_ivani))
-
+            Estabelecimento(R.drawable.imgsbes, getString(R.string.nome_sbes), getString(R.string.supermercado), getString(R.string.desc_sbes), getString(R.string.telefone_sbes)),
+            Estabelecimento(R.drawable.img_belopao, getString(R.string.nome_beloPao), getString(R.string.padaria), getString(R.string.desc_beloPao), getString(R.string.telefone_beloPao)),
+            Estabelecimento(R.drawable.img_academia, getString(R.string.nome_academia), getString(R.string.academia), getString(R.string.desc_academia), getString(R.string.telefone_academia)),
+            Estabelecimento(R.drawable.img_aquaflora, getString(R.string.nome_aquaflora), getString(R.string.agropecuaria), getString(R.string.desc_aquaflora), getString(R.string.telefone_aquaflora)),
+            Estabelecimento(R.drawable.img_tradicao, getString(R.string.nome_tradicao), getString(R.string.choperia), getString(R.string.desc_tradicao), getString(R.string.telefone_tradicao)),
+            Estabelecimento(R.drawable.img_ivani, getString(R.string.nome_ivani), getString(R.string.loja_de_roupa), getString(R.string.desc_ivani), getString(R.string.telefone_ivani))
         )
     }
 
@@ -42,13 +42,14 @@ class MainActivity : AppCompatActivity() {
         binding.listViewEstabelecimentos.setOnItemClickListener { _, _, position, _ ->
             val estabelecimento = estabelecimentos[position]
             val intent = Intent(this, DetalheEstabelecimentoActivity::class.java)
-            intent.putExtra("foto", estabelecimento.nome)
-            intent.putExtra("nome", estabelecimento.categoria)
+
+            intent.putExtra("foto", estabelecimento.foto)
+            intent.putExtra("nome", estabelecimento.nome)
             intent.putExtra("categoria", estabelecimento.categoria)
             intent.putExtra("descricao", estabelecimento.descricao)
             intent.putExtra("telefone", estabelecimento.telefone)
+
             startActivity(intent)
         }
     }
-
 }

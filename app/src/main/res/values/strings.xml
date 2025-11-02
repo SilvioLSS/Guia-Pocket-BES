@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Guia Pocket - BES</string>
     <string name="titulo">ESTABLISHMENTS</string>
@@ -6,6 +7,7 @@
     <string name="agropecuaria">agriculture</string>
     <string name="padaria">bakery</string>
     <string name="loja_de_roupa">clothing store</string>
+    <string name="choperia">taproom</string>
     <string name="nome_sbes">Boa Esperança Serve</string>
     <string name="nome_beloPao">Belo Pão</string>
     <string name="nome_tradicao">Tradição</string>
@@ -15,7 +17,13 @@
     <string name="desc_sbes">The Boa Esperança Serve Supermarket is located at Rua Tenente Penha, 300, in the center of Boa Esperança do Sul, SP. The establishment is open Monday to Saturday, from 7:00 AM to 7:30 PM, and on Sundays, from 7:00 AM to 12:00 PM. It offers a variety of food products and everyday household items.</string>
     <string name="desc_beloPao">Belo Pão Bakery is located at Rua Mario Ybarra de Almeida, 209-303, in Boa Esperança do Sul, SP. The establishment is open Monday to Saturday, from 5 am to 7 pm, and on Sundays, from 6 am to noon. It offers a variety of breads, cakes, and other baked goods to meet everyday needs.</string>
     <string name="desc_tradicao">Tradição Choperia is located on Rua Dom Pedro II, in the center of Boa Esperança do Sul, SP. The establishment is open from Tuesday to Sunday, from 6 PM to midnight, offering a pleasant atmosphere for those seeking to enjoy good draft beer and snacks, with options for happy hour or meeting up with friends.</string>
-    <string name="desc_ivani">Ivani's Modas is a clothing store located at Rua Sete de Setembro, 380, in the center of Boa Esperança do Sul, SP. Open Monday to Saturday, from 8:30 am to 6 pm, the store offers a variety of clothing options for different styles and occasions.</string>
+    <string name="desc_ivani">Ivani\'s Modas is a clothing store located at Rua Sete de Setembro, 380, in the center of Boa Esperança do Sul, SP. Open Monday to Saturday, from 8:30 am to 6 pm, the store offers a variety of clothing options for different styles and occasions.</string>
     <string name="desc_aquaflora">AquaFlora is located at Rua Tenente Penha, 1076, in Boa Esperança do Sul, SP. The establishment is open Monday to Friday, from 7:30 am to 6:30 pm, and on Saturdays, from 7:30 am to 4 pm. It offers a variety of products related to the world of gardening, such as plants, flowers, pots, and accessories for cultivation and interior decoration.</string>
     <string name="desc_academia">Vip Fitness Academia is located on Rua General Osório, in the center of Boa Esperança do Sul, SP. The gym offers extended hours, operating Monday through Friday from 5:00 AM to 11:00 PM, and Saturdays from 7:00 AM to 3:00 PM. It is a space dedicated to physical activity, with infrastructure to accommodate different modalities and training levels.</string>
+    <string name="telefone_sbes">+55(16)3346-1408</string>
+    <string name="telefone_beloPao">+55(16)3346-1534</string>
+    <string name="telefone_academia">+55(16)99994-8723</string>
+    <string name="telefone_aquaflora">+55(16)99961-1708</string>
+    <string name="telefone_tradicao">+55(14)3666-2013</string>
+    <string name="telefone_ivani">+55(16)3346-1580</string>
 </resources>

@@ -1,4 +1,4 @@
-# 🏪 Guia Pocket Bairro X
+# 🏪 Guia Pocket - BES
 
 <div align="center">
 

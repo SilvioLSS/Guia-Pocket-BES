@@ -71,11 +71,11 @@ O **Guia Pocket - BES** é um aplicativo Android desenvolvido em Kotlin que tem 
 - Conecte um dispositivo Android ou use um emulador
 - Clique em "Run" ▶️
 
-👨‍💻 Desenvolvedor
-Silvio Luiz Silva santos
-IFSP - Campus Araraquara
-Análise e Desenvolvimento de Sistemas
+👨‍💻 Desenvolvedor:
+- Silvio Luiz Silva santos
+- IFSP, Campus Araraquara
+- Análise e Desenvolvimento de Sistemas
 
-📄 Licença
-Este projeto foi desenvolvido para fins educacionais como parte da disciplina ARQDM01 - Dispositivos Móveis 1 do IFSP Araraquara.
+📄 Licença:
+- Este projeto foi desenvolvido para fins educacionais como parte da disciplina ARQDM01 - Dispositivos Móveis 1 do IFSP Araraquara.
 

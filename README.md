@@ -5,7 +5,7 @@
 ![Kotlin](https://img.shields.io/badge/Kotlin-Android%20Studio-purple?style=for-the-badge&logo=kotlin)
 ![Android](https://img.shields.io/badge/Android-Mobile%20App-green?style=for-the-badge&logo=android)
 
-**Um aplicativo guia para descobrir serviços e comércios locais da cidade de Boa Esperança do Sul**
+**Um aplicativo guia para descobrir serviços e comércios locais da cidade de Boa Esperança do Sul - SP**
 
 </div>
 

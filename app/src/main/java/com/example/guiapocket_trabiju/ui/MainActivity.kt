@@ -1,55 +1,84 @@
 package com.example.guiapocket_trabiju.ui
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.guiapocket_trabiju.R
 import com.example.guiapocket_trabiju.adapter.EstabelecimentoAdapter
 import com.example.guiapocket_trabiju.databinding.ActivityMainBinding
 import com.example.guiapocket_trabiju.model.Estabelecimento
+import com.example.guiapocket_trabiju.ui.DetalheEstabelecimentoActivity
 
 class MainActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivityMainBinding
-    private lateinit var estabelecimentos: List<Estabelecimento>
+    private lateinit var estabelecimentos: MutableList<Estabelecimento>
+    private lateinit var adapter: EstabelecimentoAdapter
+    private lateinit var launcherCadastro: ActivityResultLauncher<Intent>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        estabelecimentos = mutableListOf()
         loadData()
-        setupViews()
+        setupRecyclerView()
+        setupLauncherCadastro()
         setupListeners()
     }
 
     private fun loadData() {
-        estabelecimentos = listOf(
-            Estabelecimento(R.drawable.imgsbes, getString(R.string.nome_sbes), getString(R.string.supermercado), getString(R.string.desc_sbes), getString(R.string.telefone_sbes)),
-            Estabelecimento(R.drawable.img_belopao, getString(R.string.nome_beloPao), getString(R.string.padaria), getString(R.string.desc_beloPao), getString(R.string.telefone_beloPao)),
-            Estabelecimento(R.drawable.img_academia, getString(R.string.nome_academia), getString(R.string.academia), getString(R.string.desc_academia), getString(R.string.telefone_academia)),
-            Estabelecimento(R.drawable.img_aquaflora, getString(R.string.nome_aquaflora), getString(R.string.agropecuaria), getString(R.string.desc_aquaflora), getString(R.string.telefone_aquaflora)),
-            Estabelecimento(R.drawable.img_tradicao, getString(R.string.nome_tradicao), getString(R.string.choperia), getString(R.string.desc_tradicao), getString(R.string.telefone_tradicao)),
-            Estabelecimento(R.drawable.img_ivani, getString(R.string.nome_ivani), getString(R.string.loja_de_roupa), getString(R.string.desc_ivani), getString(R.string.telefone_ivani))
+        estabelecimentos.addAll(
+            listOf(
+                Estabelecimento(R.drawable.imgsbes, "SBES", "Supermercado", "Descrição...", "999999"),
+                Estabelecimento(R.drawable.img_belopao, "Belo Pão", "Padaria", "Descrição...", "888888")
+            )
         )
     }
 
-    private fun setupViews() {
-        val adapter = EstabelecimentoAdapter(this, estabelecimentos)
-        binding.listViewEstabelecimentos.adapter = adapter
+    private fun setupRecyclerView() {
+        adapter = EstabelecimentoAdapter(estabelecimentos) { estabelecimento ->
+            val intent = Intent(this, DetalheEstabelecimentoActivity::class.java)
+            intent.putExtra("estabelecimento", estabelecimento)
+            startActivity(intent)
+        }
+
+        binding.recyclerViewEstabelecimentos.apply {
+            layoutManager = LinearLayoutManager(this@MainActivity)
+            adapter = this@MainActivity.adapter
+            addItemDecoration(
+                DividerItemDecoration(context, DividerItemDecoration.VERTICAL)
+            )
+        }
+    }
+
+    private fun setupLauncherCadastro() {
+        launcherCadastro = registerForActivityResult(
+            ActivityResultContracts.StartActivityForResult()
+        ) { result ->
+            if (result.resultCode == Activity.RESULT_OK) {
+                val novo = result.data
+                    ?.getSerializableExtra("estabelecimento", Estabelecimento::class.java)
+
+                if (novo != null) {
+                    estabelecimentos.add(novo)
+                    adapter.notifyItemInserted(estabelecimentos.size - 1)
+                }
+            }
+        }
     }
 
     private fun setupListeners() {
-        binding.listViewEstabelecimentos.setOnItemClickListener { _, _, position, _ ->
-            val estabelecimento = estabelecimentos[position]
-            val intent = Intent(this, DetalheEstabelecimentoActivity::class.java)
-
-            intent.putExtra("foto", estabelecimento.foto)
-            intent.putExtra("nome", estabelecimento.nome)
-            intent.putExtra("categoria", estabelecimento.categoria)
-            intent.putExtra("descricao", estabelecimento.descricao)
-            intent.putExtra("telefone", estabelecimento.telefone)
-
-            startActivity(intent)
+        binding.btnAdicionar.setOnClickListener {
+            launcherCadastro.launch(
+                Intent(this, CadastroEstabelecimentoActivity::class.java)
+            )
         }
     }
 }

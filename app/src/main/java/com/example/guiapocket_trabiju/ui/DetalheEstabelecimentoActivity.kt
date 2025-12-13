@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.net.toUri
 import com.example.guiapocket_trabiju.databinding.ActivityDetalheEstabelecimentoBinding
+import com.example.guiapocket_trabiju.model.Estabelecimento
 
 class DetalheEstabelecimentoActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetalheEstabelecimentoBinding
@@ -25,12 +26,11 @@ class DetalheEstabelecimentoActivity : AppCompatActivity() {
         setupListeners()
     }
 
+    private lateinit var estabelecimento: Estabelecimento
     private fun loadData() {
-        foto = intent.getIntExtra("foto", 0)
-        nome = intent.getStringExtra("nome") ?: ""
-        categoria = intent.getStringExtra("categoria") ?: ""
-        descricao = intent.getStringExtra("descricao") ?: ""
-        telefone = intent.getStringExtra("telefone") ?: ""
+        estabelecimento =
+            intent.getSerializableExtra("estabelecimento", Estabelecimento::class.java)
+                    as Estabelecimento
     }
 
     private fun setupViews() {

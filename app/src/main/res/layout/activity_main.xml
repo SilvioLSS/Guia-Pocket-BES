@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity"
-    android:background="@color/corFundo"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/corFundo">
 
     <ImageView
         android:layout_width="match_parent"
@@ -18,16 +14,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/titulo"
-        android:layout_margin="30dp"
+        android:layout_margin="20dp"
         android:layout_gravity="center"
         android:textSize="24dp"
-        android:textStyle="bold"
-        android:textColor="@color/corTexto"
-        android:fontFamily="sans-serif-light"/>
+        android:textStyle="bold"/>
 
-        <ListView
-            android:id="@+id/listViewEstabelecimentos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewEstabelecimentos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 
+    <!-- Botão de cadastro (igual ao professor) -->
+    <Button
+        android:id="@+id/btnAdicionar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Adicionar estabelecimento"/>
 </LinearLayout>

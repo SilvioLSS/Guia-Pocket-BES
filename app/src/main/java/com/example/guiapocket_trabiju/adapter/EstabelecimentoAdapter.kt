@@ -1,5 +1,6 @@
 package com.example.guiapocket_trabiju.adapter
 
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -37,7 +38,13 @@ class EstabelecimentoAdapter(
         fun bind(estabelecimento: Estabelecimento) {
             binding.nomeEstabelecimento.text = estabelecimento.nome
             binding.categoriaEstabelecimento.text = estabelecimento.categoria
-            binding.foto.setImageResource(estabelecimento.foto)
+
+            // Carregar imagem da URI ou do drawable
+            if (estabelecimento.fotoUri != null) {
+                binding.foto.setImageURI(Uri.parse(estabelecimento.fotoUri))
+            } else {
+                binding.foto.setImageResource(estabelecimento.foto)
+            }
 
             binding.root.setOnClickListener {
                 onClick(estabelecimento)

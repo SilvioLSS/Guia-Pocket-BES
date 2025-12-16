@@ -222,13 +222,13 @@ binding.edtFiltro.addTextChangedListener(object : TextWatcher {
 
 ## 📊 Evolução do Projeto
 
-### Versão 1.0 (Primeiro Bimestre)
+### Versão 1.0
 - ✅ ListView com dados estáticos
 - ✅ Navegação com Intents
 - ✅ Internacionalização
 - ✅ Modo claro/escuro
 
-### Versão 2.0 (Segundo Bimestre) - **ATUAL**
+### Versão 2.0  - **ATUAL**
 - ✅ RecyclerView para melhor performance
 - ✅ Room Database para persistência
 - ✅ Cadastro de novos estabelecimentos
@@ -258,7 +258,7 @@ Este projeto foi desenvolvido para fins educacionais como parte da disciplina:
 **ARQDMO1 - Dispositivos Móveis 1**  
 **Professor:** Henrique Galati  
 **Instituição:** IFSP - Campus Araraquara  
-**Período:** 2º Bimestre de 2024
+**Período:** 2º Semestre de 2025
 
 ---
 

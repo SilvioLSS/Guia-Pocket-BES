@@ -274,6 +274,6 @@ Este projeto foi desenvolvido para fins educacionais como parte da disciplina:
 
 **⭐ Se este projeto foi útil, considere dar uma estrela no repositório!**
 
-Desenvolvido com ❤️ por [Silvio Luiz Silva Santos](https://github.com/SilvioLSS)
+Desenvolvido por [Silvio Luiz Silva Santos](https://github.com/SilvioLSS)
 
 </div>
